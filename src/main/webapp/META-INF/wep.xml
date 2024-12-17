@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = " UTF-8"?>
+<wep-app>
+	<security-role>
+		<role-name>role1</role-name>
+	</security-role>
+	<security-constraint>
+	<wep-resoure-collection>
+		<wep-resoure-name>JSPBook</wep-resoure-name>
+		<url-pattern>/public/register.jsp</url-pattern>
+		<http-method>GET</http-method>
+	</wep-resoure-collection>
+	<auth-contraint>
+		<description></description>
+		<role-name>role1</role-name>
+	</auth-contraint>
+	</security-constraint>
+	<login-config>
+		<auth-methood>FORM</auth-methood>
+		<form-login-config>
+			<form-login-page>/public/login.jsp</form-login-page>
+			<form-error-page>/public/login_falied.jsp</form-error-page>
+		</form-login-config>
+	</login-config>
+</wep-app>
